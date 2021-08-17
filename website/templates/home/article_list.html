@@ -1,0 +1,24 @@
+{% extends 'container.html' %}
+{% load static %}
+
+
+{% block title %}
+    Article List
+{% endblock title %}
+
+
+{% block content_container %}
+    <div class="row justify-content-center">
+        <div class="col-6" style="background-color: lightcyan;">
+            <h1>Article List</h1>
+            <a href="{% url 'article_create' %}" class="btn btn-primary">Create</a>
+            {% for article in object_list %}
+                <h6><a href="{% url 'article_detail' article.id %}">{{article.title}}</a> | Updated: {{article.updated}} |<a href="{% url 'article_update' article.id %}" >Update</a>| <a href="{% url 'article_delete' article.id %}">Delete</a></h6>
+                
+            {% endfor %}
+        </div>
+    </div>
+    
+{% endblock content_container %}
+    
+    

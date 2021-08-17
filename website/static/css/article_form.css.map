@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,GAAG,CAAC,GAAG,AAAA,SAAS,CAAC;EACb,gBAAgB,EAAE,SAAS;CAC9B;;AAED,AAAA,MAAM,CAAC;EACH,aAAa,EAAE,IAAI;CACtB",
+    "sources": [
+        "article_form.scss"
+    ],
+    "names": [],
+    "file": "article_form.css"
+}

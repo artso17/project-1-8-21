@@ -1,0 +1,31 @@
+{% extends 'container.html' %}
+
+
+{% block title %}
+    {{object.title|title}}
+{% endblock title %}
+    
+
+{% block style %}
+  <link rel="stylesheet" href="article_detail.css">
+{% endblock style %}
+  
+
+{% block content_container %}
+<div class="row justify-content-center">
+    <article class="col-6">
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a href="{% url 'home' %}">Home</a></li>
+              <li class="breadcrumb-item active" aria-current="page">{{object.title}}</li>
+            </ol>
+          </nav>
+        <img src="{{object.image.url}}" alt="thumbnail" width="100%">
+        <h2>{{object.title}}</h2>
+        <h5>Updated: {{object.updated|date:"d/m/y"}}</h5>
+        <p>{{object.body}}</p>
+
+    </article>
+</div>
+{% endblock content_container %}
+    

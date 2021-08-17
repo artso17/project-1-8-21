@@ -1,0 +1,28 @@
+{% extends 'container.html' %}
+
+
+{% block title %}
+    {{object.title}}|Delete
+{% endblock title %}
+
+
+{% block content_container %}
+<div class="row justify-content-center">
+    <div class="col-6">
+        <h1>Delete Article</h1>
+        <p>Are you sure sure want to delete {{object.title}}?</p>
+        <div class="row">
+            <form method="post" class="col-2">
+                {% csrf_token %}
+                <button type="submit" class="btn btn-outline-primary">Yes</button>
+            </form>
+            <div class="col-2">
+                <a href="{% url 'home' %}" class="btn btn-success">No</a>
+
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock content_container %}
+    
+    
