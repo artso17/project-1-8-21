@@ -20,12 +20,12 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'silahkan-bikin-sendiri'
+SECRET_KEY = 'silahkan-bikin-sendiri'  # silahkan diganti dengan yang baru
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True  # silahkan dibuat menjadi False
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['*']  # silahkan diganti ke domain masing masing
 
 
 # Application definition
@@ -37,7 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'home.apps.HomeConfig',
+    'home.apps.HomeConfig',  # pastikan aplikasi telah tersedia di INSTALLED_APPS
 ]
 
 MIDDLEWARE = [
@@ -120,13 +120,12 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [BASE_DIR/'static']
-STATIC_ROOT = BASE_DIR/'static_root'
+STATIC_ROOT = BASE_DIR/'static_root'  # pastikan static_root telah diatur
 
-MEDIA_URL = '/media/'
-MEDIA_ROOT = BASE_DIR/'media'
+MEDIA_URL = '/media/'  # pastikan Media_url telah diatur
+MEDIA_ROOT = BASE_DIR/'media'  # pastikan Media_root telah diatur
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
-print(DEBUG)

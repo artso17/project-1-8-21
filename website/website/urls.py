@@ -27,7 +27,6 @@ urlpatterns = [
     path("create/", ArticleCreateView.as_view(), name="article_create"),
     path("", ArticleListView.as_view(), name="home"),
     path('admin/', admin.site.urls),
-    re_path(r'^media/(?P<path>.*)$', serve,
-            {'document_root': settings.MEDIA_ROOT}),
-    # static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+    # re_path(r'^media/(?P<path>.*)$', serve,
+    #         {'document_root': settings.MEDIA_ROOT}),#pastikan media_url dan media_root telah diatur
 ]
